@@ -93,13 +93,18 @@ class InfoView extends BaseView {
           'frameset.html'
       );
 
-    this.$container
-      .find('a.wormbase')
-      .attr(
-        'href',
-        'https://www.wormbase.org/species/all/anatomy_term/' +
-          (WBBT_TERMS[node] || node)
-      );
+    // Link to WormBase by WBbt anatomy term (from the connectome KG). Case-insensitive
+    // since DataService.cellClass() casing varies; hide the link when there is no term
+    // rather than producing a broken name-based URL.
+    let wbbt = WBBT_TERMS[node] || WBBT_TERMS[String(node).toUpperCase()];
+    let $wormbase = this.$container.find('a.wormbase');
+    if (wbbt) {
+      $wormbase
+        .attr('href', 'https://www.wormbase.org/species/all/anatomy_term/' + wbbt)
+        .show();
+    } else {
+      $wormbase.removeAttr('href').hide();
+    }
 
     this.$container
       .find('span.cellname')
