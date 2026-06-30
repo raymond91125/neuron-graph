@@ -2,9 +2,10 @@ const $ = require('jquery');
 const BaseView = require('./base-view');
 
 const DataService = require('../data-service');
-// Cell-class -> WBbt anatomy term (from the connectome KG curation); falls back to the
-// class name when a term is unknown.
+// Node-name -> WBbt anatomy term and -> WormAtlas page (from the connectome KG pipeline).
+// Links are hidden when a target is unknown rather than rendered as a broken URL.
 const WBBT_TERMS = require('../wbbt-terms.json');
+const WORMATLAS_LINKS = require('../wormatlas-links.json');
 
 class InfoView extends BaseView {
   constructor(model) {
@@ -84,14 +85,16 @@ class InfoView extends BaseView {
   updateContent(selected) {
     let node = DataService.cellClass(selected[0]);
 
-    this.$container
-      .find('a.wormatlas')
-      .attr(
-        'href',
-        'http://www.wormatlas.org/neurons/Individual%20Neurons/' +
-          node +
-          'frameset.html'
-      );
+    // Link to WormAtlas (neuron pages by class; body wall muscle -> somatic-muscle page;
+    // other non-neuron categories have no mapped page). Hide when unknown.
+    let atlas =
+      WORMATLAS_LINKS[node] || WORMATLAS_LINKS[String(node).toUpperCase()];
+    let $wormatlas = this.$container.find('a.wormatlas');
+    if (atlas) {
+      $wormatlas.attr('href', atlas).show();
+    } else {
+      $wormatlas.removeAttr('href').hide();
+    }
 
     // Link to WormBase by WBbt anatomy term (from the connectome KG). Case-insensitive
     // since DataService.cellClass() casing varies; hide the link when there is no term
