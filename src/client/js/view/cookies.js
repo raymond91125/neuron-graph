@@ -21,7 +21,7 @@ const KEY_TO_COOKIE_MAP = {
   groups: 'g',
   hidden: 'h',
   coordinates: 'cor',
-  split: 'sp',
+  split: 'st',
   join: 'jo',
   legendItems: 'ln'
 };
