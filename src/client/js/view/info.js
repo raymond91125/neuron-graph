@@ -5,6 +5,8 @@ const DataService = require('../data-service');
 // Node-name -> WBbt anatomy term and -> WormAtlas page (from the connectome KG pipeline).
 // Links are hidden when a target is unknown rather than rendered as a broken URL.
 const WBBT_TERMS = require('../wbbt-terms.json');
+// WBbt term id -> human-readable label (e.g. "WBbt:0003638" -> "MC neuron"), from the KG.
+const WBBT_LABELS = require('../wbbt-labels.json');
 const WORMATLAS_LINKS = require('../wormatlas-links.json');
 
 class InfoView extends BaseView {
@@ -108,6 +110,60 @@ class InfoView extends BaseView {
     this.$container
       .find('span.cellname')
       .html(node);
+
+    this.renderSummary(node, wbbt);
+  }
+
+  // Summary of what the database knows about the cell (group): type, neurotransmitter(s),
+  // birth, location, class members, and the grounded WBbt anatomy term. Rows with no data
+  // are omitted. All facts come from DataService (already loaded from /api/cells) plus the
+  // KG-derived WBbt term/label maps.
+  renderSummary(node, wbbt) {
+    let rows = [];
+    let addRow = (key, value) => {
+      if (value) { rows.push(`<dt>${key}</dt><dd>${value}</dd>`); }
+    };
+
+    let type = DataService.typ(node);
+    if (type !== undefined && type !== null) {
+      addRow('Type', DataService.getTypeDisplayNames(type));
+    }
+
+    let nt = DataService.nt(node);
+    if (nt) {
+      addRow('Neurotransmitter', DataService.getNeurotransmitterDisplayNames(nt));
+    }
+
+    let emb = DataService.isEmb(node);
+    if (emb !== undefined) {
+      addRow('Birth', emb ? 'Embryonic' : 'Post-embryonic');
+    }
+
+    let locations = [];
+    if (DataService.exists(node, 'head')) { locations.push('Head'); }
+    if (DataService.exists(node, 'tail')) { locations.push('Tail'); }
+    if (!locations.length && DataService.exists(node, 'complete')) {
+      locations.push('Body');
+    }
+    addRow('Location', locations.join(', '));
+
+    let members = DataService.classMembers(node) || [];
+    if (members.length > 1) {
+      addRow(
+        'Members',
+        members.map(m => DataService.getDisplayName(m)).join(', ')
+      );
+    }
+
+    if (wbbt) {
+      let label = WBBT_LABELS[wbbt];
+      let idLink =
+        `<a href="https://www.wormbase.org/species/all/anatomy_term/${wbbt}"` +
+        ` target="_blank">${wbbt}</a>`;
+      addRow('Anatomy', label ? `${label} (${idLink})` : idLink);
+    }
+
+    this.$container.find('.cell-summary').html(rows.join(''));
   }
 }
 
