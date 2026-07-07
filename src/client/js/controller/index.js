@@ -37,8 +37,11 @@ let bindInfoNotificationEvents = ({ model, view }) => {
 let bindSearchbarEvents = ({ model, view }) => {
   view.searchbar.on('inputChanged', inputs => {
     let previousInput = model.input;
-    model.setInput(inputs);
-    let currentInput = model.input;
+    // Preview the validated input (what setInput() will assign to model.input) so the
+    // clear decision can run BEFORE applying the new input. setInput() splits the class
+    // of an individual-cell input so its sister cells render; clearing AFTER setInput()
+    // wiped that split and dropped sister cells (e.g. typing AIYL lost its AIYR gap junction).
+    let currentInput = model.getValidInput(inputs);
     if (previousInput.toString() == currentInput.toString()) {
       return;
     }
@@ -48,6 +51,7 @@ let bindSearchbarEvents = ({ model, view }) => {
     ) {
       model.clear();
     }
+    model.setInput(inputs);
     model.updateNetwork();
   });
 
