@@ -79,18 +79,23 @@ class SearchbarView extends BaseView {
       return;
     }
 
-    // Restrict suggestions to valid inputs that start with the term.
+    // Restrict suggestions to valid inputs that start with the term. Matching is
+    // case-insensitive so lowercase-named pharyngeal / non-neuronal cells (e.g. mc2, pm3, e2,
+    // g1) are found when the user types the conventional uppercase (MC2, PM3, ...).
     if (['DAN', 'DBN', 'DDN', 'VAN', 'VBN', 'VCN', 'VDN', 'ASN'].includes(term)) {
       term = term.substring(0, 2);
     }
-    let suggestions = unique(validNodes.filter(node => node.startsWith(term)).sort());
+    let lowerTerm = term.toLowerCase();
+    let suggestions = unique(
+      validNodes.filter(node => node.toLowerCase().startsWith(lowerTerm)).sort()
+    );
 
     // Suggest muscles as well, if term starts with 'BW' or 'MU'.
     if (
-      term == 'B' ||
-      term == 'M' ||
-      term.startsWith('BW') ||
-      term.startsWith('MU')
+      lowerTerm == 'b' ||
+      lowerTerm == 'm' ||
+      lowerTerm.startsWith('bw') ||
+      lowerTerm.startsWith('mu')
     ) {
       let muscles = validNodes
         .filter((n) => DataService.typ(n) == 'b')
