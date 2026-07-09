@@ -2,7 +2,16 @@
 // valid node of: hermaphrodite cells populate complete/head/tail/unc31 as before; cells present
 // in the male populate the additive 'male' database. Male-only cells never enter the
 // hermaphrodite databases, so those views are unchanged.
-const CELL_SEXES = require('./cell-sexes.json');
+//
+// Keys are upper-cased because DataService calls addCell() with upper-cased cell names (all
+// validNodes/isCell/etc. are upper-cased). The source JSON keeps cells' natural case (e.g. the
+// lowercase pharyngeal/non-neuronal cells mc2DL, pm3D), so without this the lookup would miss
+// them and drop them from validNodes['male'] (and leak male-only ones into the herm databases).
+const RAW_CELL_SEXES = require('./cell-sexes.json');
+const CELL_SEXES = {};
+for (let name in RAW_CELL_SEXES) {
+  CELL_SEXES[name.toUpperCase()] = RAW_CELL_SEXES[name];
+}
 
 class CellInfo {
   constructor() {
