@@ -24,12 +24,13 @@ Caenorhabditis elegans.” Nature,
 
 Related repositories:
 
-- [CIRCE visualization](https://github.com/PrincetonUniversity/neuron-graph) (this project)
-- [FunCoNN / NemaNode](https://github.com/zhenlab-ltri/NemaNode) (upstream)
+- [CIRCE](https://github.com/raymond91125/celegans-connectome-kg) (knowledge-graph core + project home)
+- [CIRCE visualization](https://github.com/raymond91125/neuron-graph) (this repo)
+- [NemaNode](https://github.com/zhenlab-ltri/NemaNode) (upstream, via FunCoNN)
 
 This project is in beta and has not yet been peer reviewed. Data and code are
 released under a permissive license at
-[https://github.com/PrincetonUniversity/neuron-graph/](https://github.com/PrincetonUniversity/neuron-graph/)
+[https://github.com/raymond91125/celegans-connectome-kg](https://github.com/raymond91125/celegans-connectome-kg)
 
 CIRCE is developed by [WormBase](https://wormbase.org/) and the
 [Alliance of Genome Resources](https://www.alliancegenome.org/). The underlying

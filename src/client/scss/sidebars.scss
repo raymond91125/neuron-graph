@@ -21,7 +21,8 @@
     line-height: 91px;
   }
   #logo {
-    background-image: url('../image/logo.png');
+    background-image: url('../image/logo.svg');
+    background-size: contain;
     width: 200px;
     height: 71px;
   }
@@ -75,7 +76,8 @@
     line-height: 67px;
   }
   #logo {
-    background-image: url('../image/logo_small.png');
+    background-image: url('../image/logo.svg');
+    background-size: contain;
     width: 160px;
     height: 57px;
     margin-left: 10px;
