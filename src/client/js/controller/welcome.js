@@ -61,43 +61,45 @@ class Welcome {
       .then(() => {
         // Update and display welcome.
         this.view.help.setWelcomeContent(
-          'FunCoNN (Beta)',
+          'CIRCE',
           [
-            'Welcome to <b>FunCoNN (Beta): <u>Fun</u>ctional <u>Co</u>nnectivity on <u>N</u>ema <u>N</u>ode</b>',
+            'Welcome to <b>CIRCE: <u>C</u>onnectome <u>I</u>ntegration &amp; <u>R</u>easoning for <u>C</u>. <u>E</u>legans</b>',
             '<p>',
-            'A browser of functional connectivity measurements of <i>C. elegans</i> overlaid ' +
-            'on select connectomics data using <a href="https://nemanode.org/" target="_blank">Nema Node</a>.',
+            'CIRCE integrates published connectome datasets of the nematode <i>C. elegans</i> into a ' +
+            'single knowledge graph you can browse and reason over. The connectome is not one fixed ' +
+            'wiring diagram &mdash; it varies with sex, developmental age, and how each animal was ' +
+            'reconstructed &mdash; so CIRCE keeps every dataset distinct and lets you compare across them.',
             '<p>',
-            'Functional connectivity measurements show the causal direction of information flow, polarity ' +
-            'and functional strength of neural connections based on optogenetic perturbations and calcium ' +
-            'imaging. Functional measurements from a forthcoming manuscript from the ' +
-            '<a href="http://leiferlab.princeton.edu/" target="_blank">Leifer Lab</a>: <a ' +
-            'href="https://www.nature.com/articles/s41586-023-06683-4">Randi, Sharma, Dvali ' +
-            'and Leifer, &#8220A neural signal propagation atlas of Caenorhabditis elegans.&#8221 Nature, (2023)</a>. ' +
+            'It brings together chemical-synapse and gap-junction wiring (White et al., 1986; ' +
+            '<a href="https://doi.org/10.1038/s41586-019-1352-7" target="_blank">Cook et al., 2019</a>; ' +
+            '<a href="https://doi.org/10.1038/s41586-021-03778-8" target="_blank">Witvliet et al., 2021</a>) ' +
+            'with functional connectivity measured by neural activation (' +
+            '<a href="https://www.nature.com/articles/s41586-023-06683-4" target="_blank">Randi et al., 2023</a>), ' +
+            'and grounds every cell to <a href="https://wormbase.org/" target="_blank">WormBase</a> anatomy ' +
+            'ontology terms. Extrasynaptic neuropeptide&ndash;receptor signaling and ' +
+            'receptor-expression-inferred connection sign (activating vs. suppressing) are being added.',
             '<p>',
-            '<b><u>IMPORTANT: Only those measured functional connections  are shown for which we have strong ' +
-            'statistical confidence (many observations, large transients, q<0.05). See manuscript for evidence ' +
-            'of additional functional connections.</u></b> The absence of significance does not ' +
-            'imply significance of absence.',
+            'Search for a cell or class to see its connections, then open any cell to view its complete ' +
+            'knowledge-graph connectivity across every dataset &mdash; including connections hidden from the ' +
+            'current view by display thresholds &mdash; and download it as CSV.',
             '<p>',
-            'Measurements are displayed using <a href="https://nemanode.org/" target="_blank">Nema Node</a>, ' +
-            'an open source <a href="https://github.com/zhenlab-ltri/NemaNode" target="_blank">software package</a> ' +
-            'described in <a href="https://doi.org/10.1038/s41586-021-03778-8" target="_blank">Witvleit et al., 2021</a> ' +
-            'from the <a href="https://www.zhenlab.com/" target="_blank">Zhen</a>, ' +
+            '<b><u>IMPORTANT: only functional connections with strong statistical confidence are shown ' +
+            '(many observations, large transients, q&lt;0.05); see ' +
+            '<a href="https://www.nature.com/articles/s41586-023-06683-4" target="_blank">Randi et al.</a> ' +
+            'for evidence of additional functional connections.</u></b> The absence of significance does ' +
+            'not imply significance of absence.',
+            '<p>',
+            'CIRCE is developed by <a href="https://wormbase.org/" target="_blank">WormBase</a> and the ' +
+            '<a href="https://www.alliancegenome.org/" target="_blank">Alliance of Genome Resources</a>. ' +
+            'It is built on FunCoNN (<a href="http://leiferlab.princeton.edu/" target="_blank">Leifer Lab</a>, ' +
+            'Princeton) and <a href="https://nemanode.org/" target="_blank">NemaNode</a> (' +
+            '<a href="https://www.zhenlab.com/" target="_blank">Zhen</a>, ' +
             '<a href="https://scholar.harvard.edu/aravisamuel" target="_blank">Samuel</a>, and ' +
-            '<a href="https://lichtmanlab.fas.harvard.edu" target="_blank">Lichtman</a> labs. Select connectomics ' +
-            'datasets from Witvleit et al, and others are also displayed.',
+            '<a href="https://lichtmanlab.fas.harvard.edu" target="_blank">Lichtman</a> labs).',
             '<p>',
-            'This project is in beta and has not yet been peer reviewed. Data and code are released under ' +
-            'a permissive license at <a href="https://github.com/PrincetonUniversity/neuron-graph" ' +
-            'target="_blank">https://github.com/PrincetonUniversity/neuron-graph/</a>',
-            '<p>',
-            'This fork is developed by Research Computing staff in the ' +
-            '<a href="https://lsi.princeton.edu" target="_blank">Lewis-Sigler Institute for Integrative ' +
-            'Genomics</a> (Robert Leach and Lance Parsons) and the ' +
-            '<a href="https://pni.princeton.edu" target="_blank">Princeton Neuroscience Institute</a> ' +
-            '(Benjamin Singer). Request features or report bugs on ' +
-            '<a href="https://github.com/PrincetonUniversity/neuron-graph/issues" target="_blank">Github</a>.'
+            'This project is in beta and has not yet been peer reviewed. Source code, feature requests, and ' +
+            'bug reports: <a href="https://github.com/raymond91125/celegans-connectome-kg" target="_blank">' +
+            'github.com/raymond91125/celegans-connectome-kg</a>.'
           ]
         );
         this.view.help.showWelcome(this.coordinate(), this.position());
