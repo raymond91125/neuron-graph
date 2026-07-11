@@ -1,10 +1,10 @@
 {
-  "name": "circe",
+  "name": "circe-viz",
   "version": "1.0.0",
-  "license": "CC-BY-NC-ND-4.0",
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:PrincetonUniversity/neuron-graph.git"
+    "url": "git+ssh://git@github.com:raymond91125/circe-viz.git"
   },
   "engines": {
     "node": ">=11.15.0",

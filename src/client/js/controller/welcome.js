@@ -98,8 +98,8 @@ class Welcome {
             '<a href="https://lichtmanlab.fas.harvard.edu" target="_blank">Lichtman</a> labs).',
             '<p>',
             'This project is in beta and has not yet been peer reviewed. Source code, feature requests, and ' +
-            'bug reports: <a href="https://github.com/raymond91125/celegans-connectome-kg" target="_blank">' +
-            'github.com/raymond91125/celegans-connectome-kg</a>.'
+            'bug reports: <a href="https://github.com/raymond91125/circe" target="_blank">' +
+            'github.com/raymond91125/circe</a>.'
           ]
         );
         this.view.help.showWelcome(this.coordinate(), this.position());
