@@ -15,12 +15,12 @@
 # Usage:
 #   sh scripts/refresh-kg-artifacts.sh                 # export from the KG repo, then copy
 #   sh scripts/refresh-kg-artifacts.sh --no-export     # copy the KG repo's existing outputs only
-#   KG_REPO=/path/to/celegans-connectome-kg sh scripts/refresh-kg-artifacts.sh
+#   KG_REPO=/path/to/circe sh scripts/refresh-kg-artifacts.sh
 #
 set -e
 
 ng_root=$(cd "$(dirname "$0")/.." && pwd)
-kg_repo=${KG_REPO:-"$ng_root/../celegans-connectome-kg"}
+kg_repo=${KG_REPO:-"$ng_root/../circe"}
 src_dir="$kg_repo/outputs/neuron-graph"
 dst_dir="$ng_root/src/client/js"
 
@@ -37,7 +37,7 @@ kg_connections.json:kg-connections.json
 
 if [ ! -d "$kg_repo" ]; then
   echo "error: KG repo not found at $kg_repo" >&2
-  echo "       set KG_REPO=/path/to/celegans-connectome-kg" >&2
+  echo "       set KG_REPO=/path/to/circe" >&2
   exit 1
 fi
 
