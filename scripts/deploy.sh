@@ -39,7 +39,7 @@ AFTER=$(git rev-parse HEAD)
 # Best-effort drift check: if the KG repo's exports are available locally, warn when a bundled
 # map differs from the KG output (i.e. the KG changed but the maps weren't refreshed/committed).
 # Advisory only -- deploys still build the committed tree.
-KG_REPO=${KG_REPO:-"$ROOT/../celegans-connectome-kg"}
+KG_REPO=${KG_REPO:-"$ROOT/../circe"}
 KG_OUT="$KG_REPO/outputs/neuron-graph"
 if [ -d "$KG_OUT" ]; then
     drift=""
