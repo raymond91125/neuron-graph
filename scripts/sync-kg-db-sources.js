@@ -123,7 +123,7 @@ const existing = readJson(datasetsPath).filter(d => !d.id.startsWith('cook_') &&
 const maleDs = readJson(need(path.join(KG_OUT, 'neuron-graph-male/datasets.json')));
 const pharynxDs = readJson(need(path.join(KG_OUT, 'neuron-graph-pharynx/datasets.json')));
 const coupledDs = {
-  id: COUPLED, type: 'pharynxCoupled', name: 'Cook 2020 pharynx + inferred muscle coupling',
+  id: COUPLED, type: 'pharynxCoupled', name: 'Pharynx (2020) + (1976 gap junctions)',
   time: 50, visualTime: 50, datatypes: 'cs,gj',
   description: 'Observed Cook 2020 pharyngeal connectome plus the pharyngeal muscle/marginal '
     + 'gap junctions from Cook 2019 (electrical coupling, Albertson & Thomson 1976). '

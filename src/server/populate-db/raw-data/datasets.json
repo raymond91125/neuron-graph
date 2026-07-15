@@ -280,7 +280,7 @@
   {
     "id": "pharynx_coupled",
     "type": "pharynxCoupled",
-    "name": "Cook 2020 pharynx + inferred muscle coupling",
+    "name": "Pharynx (2020) + (1976 gap junctions)",
     "time": 50,
     "visualTime": 50,
     "datatypes": "cs,gj",
