@@ -280,7 +280,7 @@
   {
     "id": "pharynx_coupled",
     "type": "pharynxCoupled",
-    "name": "Pharynx (2020) + (1976 gap junctions)",
+    "name": "Pharynx (2020) + GJ (1976)",
     "time": 50,
     "visualTime": 50,
     "datatypes": "cs,gj",
