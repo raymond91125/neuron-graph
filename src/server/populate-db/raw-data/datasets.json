@@ -278,6 +278,15 @@
     "datatypes": "cs,gj"
   },
   {
+    "id": "yim_2024_dauer",
+    "name": "Yim et al. 2024 (dauer)",
+    "type": "head",
+    "time": 30,
+    "visualTime": 30,
+    "description": "Dauer nerve-ring connectome, Yim et al. 2024 (Nat Commun 15:1546).",
+    "datatypes": "cs"
+  },
+  {
     "id": "pharynx_coupled",
     "type": "pharynxCoupled",
     "name": "Pharynx (2020) + GJ (1976)",

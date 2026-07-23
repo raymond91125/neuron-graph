@@ -361,6 +361,16 @@ $sidenav-padding: 16px;
       background: $spacer-color;
     }
   }
+  /* Dauer is an alternative (non-continuous) life stage folded into the head developmental
+     series; mark it distinctly (blue) so it doesn't read as a normal L1->adult timepoint. */
+  #dataset-yim_2024_dauer {
+    .rectangle {
+      background: $blue;
+    }
+    .triangle {
+      border-top-color: $blue;
+    }
+  }
   .bookmark:hover {
     .mark > .rectangle {
       border-radius: 0px;
