@@ -1872,6 +1872,15 @@
     "intail": false
   },
   {
+    "name": "CP0",
+    "classes": "CP0",
+    "nt": "l",
+    "typ": "i",
+    "emb": false,
+    "inhead": false,
+    "intail": false
+  },
+  {
     "name": "CP1",
     "classes": "CP1",
     "nt": "a",
@@ -2394,6 +2403,15 @@
     "intail": false
   },
   {
+    "name": "DX4",
+    "classes": "DX4",
+    "nt": "a",
+    "typ": "i",
+    "emb": false,
+    "inhead": false,
+    "intail": false
+  },
+  {
     "name": "e2DL",
     "classes": "e2",
     "nt": "u",
@@ -2468,6 +2486,15 @@
   {
     "name": "EF3",
     "classes": "EF3",
+    "nt": "g",
+    "typ": "i",
+    "emb": false,
+    "inhead": false,
+    "intail": false
+  },
+  {
+    "name": "EF4",
+    "classes": "EF4",
     "nt": "g",
     "typ": "i",
     "emb": false,

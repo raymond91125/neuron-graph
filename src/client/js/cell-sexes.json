@@ -786,6 +786,9 @@
   "hermaphrodite",
   "male"
  ],
+ "CP0": [
+  "male"
+ ],
  "CP1": [
   "male"
  ],
@@ -928,6 +931,9 @@
  "DX3": [
   "male"
  ],
+ "DX4": [
+  "male"
+ ],
  "EF1": [
   "male"
  ],
@@ -935,6 +941,9 @@
   "male"
  ],
  "EF3": [
+  "male"
+ ],
+ "EF4": [
   "male"
  ],
  "FLPL": [
