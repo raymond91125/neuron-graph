@@ -331,6 +331,7 @@
  "EXC": "WBbt:0005776",
  "EXCGL": "WBbt:0005776",
  "EXC_CELL": "WBbt:0005812",
+ "EXC_DUCT": "WBbt:0004540",
  "FLP": "WBbt:0006828",
  "FLPL": "WBbt:0004798",
  "FLPR": "WBbt:0004797",
