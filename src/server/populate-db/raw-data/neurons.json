@@ -2484,6 +2484,15 @@
     "intail": false
   },
   {
+    "name": "exc_duct",
+    "classes": "exc_duct",
+    "nt": "u",
+    "typ": "",
+    "emb": false,
+    "inhead": false,
+    "intail": false
+  },
+  {
     "name": "excgl",
     "classes": "exc",
     "nt": "n",

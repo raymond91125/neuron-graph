@@ -4,15 +4,16 @@
 // `npm run populate-database` reproduces the full connectome DB (hermaphrodite + male +
 // pharynx) instead of the stale hermaphrodite-only seed.
 //
-// The KG (circe) projects three neuron-graph databases:
+// The KG (circe) projects these neuron-graph databases:
 //   outputs/neuron-graph/        hermaphrodite cells + connections (authoritative cell metadata)
 //   outputs/neuron-graph-male/   cook_2019_male  cells + connections + dataset
 //   outputs/neuron-graph-pharynx/cook_2020_pharynx cells + connections + dataset
+//   outputs/neuron-graph-dauer/  yim_2024_dauer  cells + connections + dataset (a "head" life stage)
 //
 // This writes, into src/server/populate-db/raw-data/:
-//   neurons.json                 union of all three projections' cells (raw-data cell schema)
-//   connections/cook_2019_male.json, connections/cook_2020_pharynx.json (raw-data connection schema)
-//   datasets.json                existing hermaphrodite datasets + the two Cook dataset entries
+//   neurons.json                 union of all projections' cells (raw-data cell schema)
+//   connections/cook_2019_male.json, cook_2020_pharynx.json, yim_2024_dauer.json (raw-data schema)
+//   datasets.json                existing hermaphrodite datasets + KG-derived Cook/dauer entries
 //
 // Hermaphrodite CONNECTIONS stay in their committed raw-data/connections/*.json (they carry the
 // viz's own randi_funconn_wildcp "complete"-collection labelling, which the KG intentionally drops).
@@ -66,23 +67,25 @@ const toRawConnection = (conn, datasetId) => {
   };
 };
 
-// --- Cells: union ng + male + pharynx (first occurrence wins; shared cells are identical) -------
+// --- Cells: union ng + male + pharynx + dauer (first occurrence wins; shared cells identical) ----
 const ngCells = readJson(need(path.join(KG_OUT, 'neuron-graph/cells.json')));
 const maleCells = readJson(need(path.join(KG_OUT, 'neuron-graph-male/cells.json')));
 const pharynxCells = readJson(need(path.join(KG_OUT, 'neuron-graph-pharynx/cells.json')));
+const dauerCells = readJson(need(path.join(KG_OUT, 'neuron-graph-dauer/cells.json')));
 
 const byName = new Map();
-for (const c of [...ngCells, ...maleCells, ...pharynxCells]) {
+for (const c of [...ngCells, ...maleCells, ...pharynxCells, ...dauerCells]) {
   if (!byName.has(c.name)) byName.set(c.name, toRawCell(c));
 }
 const neurons = [...byName.values()].sort((a, b) => a.name.localeCompare(b.name));
 fs.writeFileSync(path.join(RAW, 'neurons.json'), JSON.stringify(neurons, null, 2) + '\n');
 console.log(`neurons.json: ${neurons.length} cells (ng ${ngCells.length} + male/pharynx-specific)`);
 
-// --- Cook connection files (raw-data schema) ----------------------------------------------------
+// --- KG-projected connection files (raw-data schema): male, pharynx, dauer ----------------------
 const cookConnFiles = [
   ['neuron-graph-male/connections.json', 'cook_2019_male'],
-  ['neuron-graph-pharynx/connections.json', 'cook_2020_pharynx']
+  ['neuron-graph-pharynx/connections.json', 'cook_2020_pharynx'],
+  ['neuron-graph-dauer/connections.json', 'yim_2024_dauer']
 ];
 for (const [rel, datasetId] of cookConnFiles) {
   const conns = readJson(need(path.join(KG_OUT, rel)));
@@ -117,11 +120,15 @@ for (const c of maleConns) {
 fs.writeFileSync(path.join(RAW, 'connections', `${COUPLED}.json`), JSON.stringify(coupled, null, 2) + '\n');
 console.log(`connections/${COUPLED}.json: ${coupled.length} connections (+${nGap} muscle/marginal gaps)`);
 
-// --- Datasets: committed hermaphrodite entries + the two Cook dataset entries + coupled ----------
+// --- Datasets: committed hermaphrodite entries + KG-derived Cook/dauer entries + coupled ---------
+// Strip the KG-derived ids from the committed baseline so re-runs don't double-count them.
 const datasetsPath = path.join(RAW, 'datasets.json');
-const existing = readJson(datasetsPath).filter(d => !d.id.startsWith('cook_') && d.id !== COUPLED);
+const existing = readJson(datasetsPath).filter(
+  d => !d.id.startsWith('cook_') && !d.id.startsWith('yim_') && d.id !== COUPLED
+);
 const maleDs = readJson(need(path.join(KG_OUT, 'neuron-graph-male/datasets.json')));
 const pharynxDs = readJson(need(path.join(KG_OUT, 'neuron-graph-pharynx/datasets.json')));
+const dauerDs = readJson(need(path.join(KG_OUT, 'neuron-graph-dauer/datasets.json')));
 const coupledDs = {
   id: COUPLED, type: 'pharynxCoupled', name: 'Pharynx (2020) + GJ (1976)',
   time: 50, visualTime: 50, datatypes: 'cs,gj',
@@ -129,6 +136,9 @@ const coupledDs = {
     + 'gap junctions from Cook 2019 (electrical coupling, Albertson & Thomson 1976). '
     + 'Visualization only - not part of the observed knowledge graph.'
 };
-const datasets = [...existing, ...maleDs, ...pharynxDs, coupledDs];
+const datasets = [...existing, ...maleDs, ...pharynxDs, ...dauerDs, coupledDs];
 fs.writeFileSync(datasetsPath, JSON.stringify(datasets, null, 2) + '\n');
-console.log(`datasets.json: ${datasets.length} datasets (+${maleDs.length + pharynxDs.length} Cook)`);
+console.log(
+  `datasets.json: ${datasets.length} datasets ` +
+    `(+${maleDs.length + pharynxDs.length} Cook, +${dauerDs.length} dauer)`
+);
