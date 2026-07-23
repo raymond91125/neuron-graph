@@ -1649,7 +1649,7 @@
   {
     "name": "CA1",
     "classes": "CA1",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1658,7 +1658,7 @@
   {
     "name": "CA2",
     "classes": "CA2",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1667,7 +1667,7 @@
   {
     "name": "CA3",
     "classes": "CA3",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1676,7 +1676,7 @@
   {
     "name": "CA4",
     "classes": "CA4",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1685,7 +1685,7 @@
   {
     "name": "CA5",
     "classes": "CA5",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1694,7 +1694,7 @@
   {
     "name": "CA6",
     "classes": "CA6",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1703,7 +1703,7 @@
   {
     "name": "CA7",
     "classes": "CA7",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1712,7 +1712,7 @@
   {
     "name": "CA8",
     "classes": "CA8",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1721,7 +1721,7 @@
   {
     "name": "CA9",
     "classes": "CA9",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1766,7 +1766,7 @@
   {
     "name": "CEMDL",
     "classes": "CEM",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1775,7 +1775,7 @@
   {
     "name": "CEMDR",
     "classes": "CEM",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1784,7 +1784,7 @@
   {
     "name": "CEMVL",
     "classes": "CEM",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1793,7 +1793,7 @@
   {
     "name": "CEMVR",
     "classes": "CEM",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1874,7 +1874,7 @@
   {
     "name": "CP1",
     "classes": "CP1",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1883,7 +1883,7 @@
   {
     "name": "CP2",
     "classes": "CP2",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1892,7 +1892,7 @@
   {
     "name": "CP3",
     "classes": "CP3",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1901,7 +1901,7 @@
   {
     "name": "CP4",
     "classes": "CP4",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1910,7 +1910,7 @@
   {
     "name": "CP5",
     "classes": "CP5",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1919,7 +1919,7 @@
   {
     "name": "CP6",
     "classes": "CP6",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1928,7 +1928,7 @@
   {
     "name": "CP7",
     "classes": "CP7",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1937,7 +1937,7 @@
   {
     "name": "CP8",
     "classes": "CP8",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -1946,7 +1946,7 @@
   {
     "name": "CP9",
     "classes": "CP9",
-    "nt": "u",
+    "nt": "g",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -2369,7 +2369,7 @@
   {
     "name": "DX1",
     "classes": "DX1",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -2378,7 +2378,7 @@
   {
     "name": "DX2",
     "classes": "DX2",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -2387,7 +2387,7 @@
   {
     "name": "DX3",
     "classes": "DX3",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -2450,7 +2450,7 @@
   {
     "name": "EF1",
     "classes": "EF1",
-    "nt": "u",
+    "nt": "g",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -2459,7 +2459,7 @@
   {
     "name": "EF2",
     "classes": "EF2",
-    "nt": "u",
+    "nt": "g",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -2468,7 +2468,7 @@
   {
     "name": "EF3",
     "classes": "EF3",
-    "nt": "u",
+    "nt": "g",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -2684,7 +2684,7 @@
   {
     "name": "HOA",
     "classes": "HOA",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -2693,7 +2693,7 @@
   {
     "name": "HOB",
     "classes": "HOB",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3242,7 +3242,7 @@
   {
     "name": "PCAL",
     "classes": "PCA",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3251,7 +3251,7 @@
   {
     "name": "PCAR",
     "classes": "PCA",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3260,7 +3260,7 @@
   {
     "name": "PCBL",
     "classes": "PCB",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3269,7 +3269,7 @@
   {
     "name": "PCBR",
     "classes": "PCB",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3278,7 +3278,7 @@
   {
     "name": "PCCL",
     "classes": "PCC",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3287,7 +3287,7 @@
   {
     "name": "PCCR",
     "classes": "PCC",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3314,7 +3314,7 @@
   {
     "name": "PDC",
     "classes": "PDC",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3341,7 +3341,7 @@
   {
     "name": "PGA",
     "classes": "PGA",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3404,7 +3404,7 @@
   {
     "name": "PHDL",
     "classes": "PHD",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3413,7 +3413,7 @@
   {
     "name": "PHDR",
     "classes": "PHD",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3836,7 +3836,7 @@
   {
     "name": "PVV",
     "classes": "PVV",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3863,7 +3863,7 @@
   {
     "name": "PVX",
     "classes": "PVX",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3872,7 +3872,7 @@
   {
     "name": "PVY",
     "classes": "PVY",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3881,7 +3881,7 @@
   {
     "name": "PVZ",
     "classes": "PVZ",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3890,7 +3890,7 @@
   {
     "name": "R1AL",
     "classes": "R1A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3899,7 +3899,7 @@
   {
     "name": "R1AR",
     "classes": "R1A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3908,7 +3908,7 @@
   {
     "name": "R1BL",
     "classes": "R1B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3917,7 +3917,7 @@
   {
     "name": "R1BR",
     "classes": "R1B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3944,7 +3944,7 @@
   {
     "name": "R2AL",
     "classes": "R2A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3953,7 +3953,7 @@
   {
     "name": "R2AR",
     "classes": "R2A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3962,7 +3962,7 @@
   {
     "name": "R2BL",
     "classes": "R2B",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3971,7 +3971,7 @@
   {
     "name": "R2BR",
     "classes": "R2B",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -3998,7 +3998,7 @@
   {
     "name": "R3AL",
     "classes": "R3A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4007,7 +4007,7 @@
   {
     "name": "R3AR",
     "classes": "R3A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4016,7 +4016,7 @@
   {
     "name": "R3BL",
     "classes": "R3B",
-    "nt": "u",
+    "nt": "s",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4025,7 +4025,7 @@
   {
     "name": "R3BR",
     "classes": "R3B",
-    "nt": "u",
+    "nt": "s",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4052,7 +4052,7 @@
   {
     "name": "R4AL",
     "classes": "R4A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4061,7 +4061,7 @@
   {
     "name": "R4AR",
     "classes": "R4A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4070,7 +4070,7 @@
   {
     "name": "R4BL",
     "classes": "R4B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4079,7 +4079,7 @@
   {
     "name": "R4BR",
     "classes": "R4B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4097,7 +4097,7 @@
   {
     "name": "R5AL",
     "classes": "R5A",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4106,7 +4106,7 @@
   {
     "name": "R5AR",
     "classes": "R5A",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4115,7 +4115,7 @@
   {
     "name": "R5BL",
     "classes": "R5B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4124,7 +4124,7 @@
   {
     "name": "R5BR",
     "classes": "R5B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4151,7 +4151,7 @@
   {
     "name": "R6AL",
     "classes": "R6A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4160,7 +4160,7 @@
   {
     "name": "R6AR",
     "classes": "R6A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4169,7 +4169,7 @@
   {
     "name": "R6BL",
     "classes": "R6B",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4178,7 +4178,7 @@
   {
     "name": "R6BR",
     "classes": "R6B",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4187,7 +4187,7 @@
   {
     "name": "R7AL",
     "classes": "R7A",
-    "nt": "u",
+    "nt": "d",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4196,7 +4196,7 @@
   {
     "name": "R7AR",
     "classes": "R7A",
-    "nt": "u",
+    "nt": "d",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4205,7 +4205,7 @@
   {
     "name": "R7BL",
     "classes": "R7B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4214,7 +4214,7 @@
   {
     "name": "R7BR",
     "classes": "R7B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4241,7 +4241,7 @@
   {
     "name": "R8AL",
     "classes": "R8A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4250,7 +4250,7 @@
   {
     "name": "R8AR",
     "classes": "R8A",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4259,7 +4259,7 @@
   {
     "name": "R8BL",
     "classes": "R8B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4268,7 +4268,7 @@
   {
     "name": "R8BR",
     "classes": "R8B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4286,7 +4286,7 @@
   {
     "name": "R9AL",
     "classes": "R9A",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4295,7 +4295,7 @@
   {
     "name": "R9AR",
     "classes": "R9A",
-    "nt": "u",
+    "nt": "l",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4304,7 +4304,7 @@
   {
     "name": "R9BL",
     "classes": "R9B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4313,7 +4313,7 @@
   {
     "name": "R9BR",
     "classes": "R9B",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4880,7 +4880,7 @@
   {
     "name": "SPCL",
     "classes": "SPC",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4889,7 +4889,7 @@
   {
     "name": "SPCR",
     "classes": "SPC",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4925,7 +4925,7 @@
   {
     "name": "SPVL",
     "classes": "SPV",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
@@ -4934,7 +4934,7 @@
   {
     "name": "SPVR",
     "classes": "SPV",
-    "nt": "u",
+    "nt": "a",
     "typ": "i",
     "emb": false,
     "inhead": false,
